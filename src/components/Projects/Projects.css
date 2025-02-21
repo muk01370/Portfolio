@@ -1,0 +1,65 @@
+.projects-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.tech-badge {
+    margin: 0.25rem;
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.filter-buttons {
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    margin: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .project-image {
+        height: 150px;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project-card {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
